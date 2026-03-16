@@ -20,6 +20,7 @@ const NAV_HTML = `
     <a href="prohibidos.html">🚫 PROHIBIDOS</a>
     <a href="longevidad.html">🌏 LONGEVIDAD</a>
     <a href="links.html">🔗 LINKS</a>
+    <a href="infografia.html">📊 INFOGRAFÍA</a>
   </div>
 </nav>
 `;

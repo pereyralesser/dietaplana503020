@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIETA PLANA 503020 · Infografía</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── INFOGRAFÍA ESPECÍFICA ── */
+.infografia-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* HEADER */
+.info-header {
+  text-align: center;
+  border: 2px solid var(--verde);
+  border-radius: 6px;
+  padding: 18px 20px 14px;
+  margin-bottom: 20px;
+  background: rgba(0,255,65,0.03);
+  box-shadow: 0 0 30px rgba(0,255,65,0.12), inset 0 0 40px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.info-header::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(0,255,65,0.2);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.info-header .dna-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--verde-dim);
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.info-header h1 {
+  font-family: var(--font-logo);
+  font-size: clamp(28px, 6vw, 54px);
+  font-weight: 900;
+  color: var(--verde);
+  text-shadow: 0 0 8px var(--verde), 0 0 20px var(--verde), 0 0 40px var(--verde2), 0 0 80px var(--verde2);
+  letter-spacing: 4px;
+  animation: parpadeo-verde 3s infinite;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.info-header .subtitle {
+  font-family: var(--font-mono);
+  font-size: clamp(11px, 2vw, 14px);
+  color: var(--cian);
+  text-shadow: 0 0 8px var(--cian);
+  letter-spacing: 2px;
+}
+
+.info-header .citas {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--amarillo);
+  text-shadow: 0 0 6px var(--amarillo);
+  animation: parpadeo-amarillo 4s infinite;
+  letter-spacing: 1px;
+}
+
+/* GRID PRINCIPAL */
+.info-main {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto auto;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+/* COLUMNA IZQUIERDA */
+.col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* COLUMNA DERECHA */
+.col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* PLATO CENTRAL */
+.plato-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ── PLATO SVG CENTRAL ── */
+.plato-svg-wrap {
+  width: 100%;
+  max-width: 320px;
+  position: relative;
+}
+
+/* ── BLOQUES LATERALES ── */
+.bloque {
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bloque::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 4px);
+  pointer-events: none;
+}
+
+.bloque-nitro {
+  background: rgba(255,0,64,0.08);
+  border: 1px solid rgba(255,0,64,0.5);
+  box-shadow: 0 0 12px rgba(255,0,64,0.1);
+}
+
+.bloque-azucar {
+  background: rgba(0,100,255,0.08);
+  border: 1px solid rgba(0,150,255,0.5);
+  box-shadow: 0 0 12px rgba(0,150,255,0.1);
+}
+
+.bloque-consejo {
+  background: rgba(0,255,65,0.05);
+  border: 1px solid rgba(0,255,65,0.3);
+}
+
+.bloque-fosfato {
+  background: rgba(0,255,65,0.08);
+  border: 1px solid rgba(0,255,65,0.5);
+  box-shadow: 0 0 12px rgba(0,255,65,0.1);
+}
+
+.bloque-titulo {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bloque-letra {
+  font-family: var(--font-logo);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.bloque-pct {
+  font-family: var(--font-logo);
+  font-size: 22px;
+  font-weight: 900;
+  display: block;
+  line-height: 1;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+}
+
+.item-list li {
+  padding: 2px 0;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1.4;
+}
+
+.item-list li::before {
+  content: '▸';
+  flex-shrink: 0;
+  font-size: 9px;
+}
+
+.tag-precaucion {
+  display: inline-block;
+  background: rgba(255,0,64,0.15);
+  border: 1px solid rgba(255,0,64,0.4);
+  color: var(--rojo);
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* PROPORCION BAR MEJORADA */
+.prop-display {
+  width: 100%;
+  border: 1px solid var(--verde-dim);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  height: 38px;
+}
+
+.pd-a { flex:5; background:rgba(0,255,65,0.15); display:flex; align-items:center; justify-content:center; flex-direction:column; border-right:1px solid var(--verde-dim); }
+.pd-b { flex:3; background:rgba(0,150,255,0.15); display:flex; align-items:center; justify-content:center; flex-direction:column; border-right:1px solid var(--verde-dim); }
+.pd-c { flex:2; background:rgba(255,0,64,0.12); display:flex; align-items:center; justify-content:center; flex-direction:column; }
+
+.pd-label { font-family:var(--font-mono); font-size:10px; font-weight:bold; line-height:1.2; text-align:center; }
+.pd-pct   { font-family:var(--font-logo); font-size:13px; font-weight:900; line-height:1; }
+
+/* SALUD PIE */
+.salud-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.salud-box {
+  background: var(--bg2);
+  border: 1px solid var(--verde-dim);
+  border-radius: 4px;
+  padding: 12px;
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+.salud-pct {
+  font-family: var(--font-logo);
+  font-size: 28px;
+  font-weight: 900;
+  display: block;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.salud-label {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* FRASE FINAL */
+.frase-box {
+  border: 1px solid var(--verde-dim);
+  border-radius: 4px;
+  padding: 14px 20px;
+  text-align: center;
+  background: rgba(0,255,65,0.03);
+  font-family: var(--font-title);
+  font-size: clamp(14px, 2.5vw, 20px);
+  color: var(--cian);
+  text-shadow: 0 0 8px var(--cian);
+  line-height: 1.5;
+}
+
+.frase-autor {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--verde-dim);
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* pH bar */
+.ph-bar {
+  display: flex;
+  height: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--verde-dim);
+  margin: 6px 0;
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.ph-acido  { flex:1; background: linear-gradient(90deg, rgba(255,0,64,0.5), rgba(255,200,0,0.3)); display:flex; align-items:center; justify-content:flex-start; padding-left:6px; color:var(--rojo); }
+.ph-alcal  { flex:1; background: linear-gradient(90deg, rgba(0,255,65,0.2), rgba(0,255,65,0.4)); display:flex; align-items:center; justify-content:flex-end; padding-right:6px; color:var(--verde); }
+.ph-marker { position:absolute; left:50%; top:0; bottom:0; width:2px; background:var(--amarillo); box-shadow:0 0 6px var(--amarillo); transform:translateX(-50%); }
+
+/* CONSEJO BOX */
+.consejo-tag {
+  display: inline-block;
+  font-family: var(--font-px);
+  font-size: 8px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+.ct-verde   { background:rgba(0,255,65,0.15); border:1px solid var(--verde); color:var(--verde); }
+.ct-cian    { background:rgba(0,255,255,0.1); border:1px solid var(--cian); color:var(--cian); }
+
+/* RESPONSIVE */
+@media (max-width: 680px) {
+  .info-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .col-left, .col-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .salud-grid { grid-template-columns: repeat(4, 1fr); }
+}
+</style>
+</head>
+<body>
+<div id="nav-container"></div>
+
+<main style="margin-top:85px; padding:20px 14px 60px;">
+<div class="infografia-wrap">
+
+  <!-- HEADER -->
+  <div class="info-header fade-in">
+    <span class="dna-tag">🧬 DIETA BÍBLICA Y ALIMENTO PARA LOS GENES 🧬</span>
+    <h1>DIETA PLANA</h1>
+    <div class="subtitle">SISTEMA NUTRIGENÉTICO · NIMER SIMEÓN MONTES</div>
+    <div class="citas">✦ Génesis 1:29 &nbsp;&nbsp;·&nbsp;&nbsp; Ezequiel 4:9 &nbsp;&nbsp;·&nbsp;&nbsp; Proporción Establecida ✦</div>
+  </div>
+
+  <!-- GRID PRINCIPAL -->
+  <div class="info-main fade-in delay-1">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="col-left">
+
+      <!-- C · NITRÓGENO 20% -->
+      <div class="bloque bloque-nitro">
+        <span class="bloque-letra" style="color:var(--rojo); text-shadow:0 0 10px var(--rojo);">C</span>
+        <div class="bloque-titulo" style="color:var(--rojo);">
+          <span style="font-size:13px; letter-spacing:2px;">CONSTRUCTORES</span>
+        </div>
+        <div style="color:var(--rojo); font-family:var(--font-title); font-size:18px; letter-spacing:1px; margin-bottom:4px;">NITRÓGENO</div>
+        <div style="font-size:10px; color:rgba(255,100,100,0.7); margin-bottom:8px; font-family:var(--font-mono);">Ácido</div>
+        <div class="tag-precaucion">⚠ PRECAUCIÓN</div>
+        <div style="font-size:10px; color:var(--rojo); margin-bottom:8px;">Exceso de Ácido Úrico</div>
+        <ul class="item-list" style="color:rgba(255,180,180,0.9);">
+          <li>🥜 Oleaginosas</li>
+          <li>🫘 Menestras</li>
+          <li>🥩 Carne <span style="color:var(--rojo); font-size:9px;">(Nº2)</span></li>
+          <li>🥛 Leche <span style="color:var(--rojo); font-size:9px;">(Nº2)</span></li>
+          <li>🥚 Huevo <span style="color:var(--rojo); font-size:9px;">(Nº2)</span></li>
+        </ul>
+        <span class="bloque-pct" style="color:var(--rojo); text-shadow:0 0 8px var(--rojo); text-align:right; display:block; margin-top:8px;">20%</span>
+      </div>
+
+      <!-- B · AZÚCARES 30% -->
+      <div class="bloque bloque-azucar">
+        <span class="bloque-letra" style="color:#00aaff; text-shadow:0 0 10px #00aaff;">B</span>
+        <div class="bloque-titulo" style="color:#00aaff;">
+          <span style="font-size:13px; letter-spacing:2px;">ENERGÉTICOS</span>
+        </div>
+        <div style="color:#00aaff; font-family:var(--font-title); font-size:18px; letter-spacing:1px; margin-bottom:4px;">AZÚCARES</div>
+        <div style="font-size:10px; color:rgba(100,180,255,0.7); margin-bottom:8px; font-family:var(--font-mono);">Complejos</div>
+        <div style="font-size:10px; color:#00aaff; background:rgba(0,150,255,0.1); border:1px solid rgba(0,150,255,0.3); padding:5px 8px; border-radius:3px; margin-bottom:8px; font-family:var(--font-mono);">
+          ⚠ No son esenciales en B12
+        </div>
+        <ul class="item-list" style="color:rgba(150,200,255,0.9);">
+          <li>🌾 Cereales integrales</li>
+          <li>🥔 Tubérculos</li>
+        </ul>
+        <span class="bloque-pct" style="color:#00aaff; text-shadow:0 0 8px #00aaff; text-align:right; display:block; margin-top:8px;">30%</span>
+      </div>
+
+    </div>
+
+    <!-- CENTRO · PLATO -->
+    <div class="plato-container">
+
+      <!-- SVG DEL PLATO -->
+      <div class="plato-svg-wrap">
+        <svg viewBox="0 0 300 300" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="glow-verde">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="glow-rojo">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="glow-azul">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- Fondo plato -->
+          <circle cx="150" cy="150" r="138" fill="rgba(0,20,10,0.6)" stroke="#007a1f" stroke-width="1"/>
+          <circle cx="150" cy="150" r="135" fill="none" stroke="#00ff41" stroke-width="0.5" stroke-dasharray="4 3" filter="url(#glow-verde)"/>
+
+          <!-- SECTOR A · FOSFATO 50% → 180° (lado derecho) -->
+          <!-- Desde -90° (arriba) girando 180° en sentido horario → ocupa lado derecho -->
+          <path d="M150,150 L150,15 A135,135 0 0,1 150,285 Z"
+            fill="rgba(0,255,65,0.12)" stroke="#00ff41" stroke-width="1.5"
+            filter="url(#glow-verde)"/>
+
+          <!-- SECTOR B · AZÚCAR 30% → 108° (izq abajo) -->
+          <path d="M150,150 L150,285 A135,135 0 0,1 21,82 Z"
+            fill="rgba(0,120,255,0.12)" stroke="#00aaff" stroke-width="1.5"
+            filter="url(#glow-azul)"/>
+
+          <!-- SECTOR C · NITRÓGENO 20% → 72° (izq arriba) -->
+          <path d="M150,150 L21,82 A135,135 0 0,1 150,15 Z"
+            fill="rgba(255,0,64,0.12)" stroke="#ff0040" stroke-width="1.5"
+            filter="url(#glow-rojo)"/>
+
+          <!-- Borde interior decorativo -->
+          <circle cx="150" cy="150" r="60" fill="rgba(0,10,5,0.8)" stroke="#007a1f" stroke-width="1" stroke-dasharray="3 2"/>
+
+          <!-- Contenido central -->
+          <text x="150" y="138" text-anchor="middle" font-family="'Orbitron',monospace" font-size="11" font-weight="900" fill="#00ff41" filter="url(#glow-verde)">PROPORCIÓN</text>
+          <text x="150" y="155" text-anchor="middle" font-family="'Orbitron',monospace" font-size="18" font-weight="900" fill="#00ff41" filter="url(#glow-verde)">503020</text>
+          <text x="150" y="170" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="9" fill="#007a1f">DIETA PLANA</text>
+
+          <!-- Etiquetas sectores -->
+          <!-- A: FOSFATO lado derecho -->
+          <text x="218" y="145" text-anchor="middle" font-family="'Orbitron',monospace" font-size="14" font-weight="900" fill="#00ff41" filter="url(#glow-verde)">A</text>
+          <text x="218" y="160" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="9" fill="#00cc33">FOSFATO</text>
+          <text x="218" y="173" text-anchor="middle" font-family="'Orbitron',monospace" font-size="16" font-weight="900" fill="#00ff41">50%</text>
+
+          <!-- B: AZÚCAR izquierda abajo -->
+          <text x="82" y="222" text-anchor="middle" font-family="'Orbitron',monospace" font-size="14" font-weight="900" fill="#00aaff" filter="url(#glow-azul)">B</text>
+          <text x="82" y="237" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="9" fill="#0088cc">AZÚCAR</text>
+          <text x="82" y="250" text-anchor="middle" font-family="'Orbitron',monospace" font-size="14" font-weight="900" fill="#00aaff">30%</text>
+
+          <!-- C: NITRÓGENO izquierda arriba -->
+          <text x="82" y="72" text-anchor="middle" font-family="'Orbitron',monospace" font-size="14" font-weight="900" fill="#ff0040" filter="url(#glow-rojo)">C</text>
+          <text x="82" y="87" text-anchor="middle" font-family="'Share Tech Mono',monospace" font-size="9" fill="#cc0033">NITRÓGENO</text>
+          <text x="82" y="100" text-anchor="middle" font-family="'Orbitron',monospace" font-size="14" font-weight="900" fill="#ff0040">20%</text>
+
+          <!-- Leyenda ceniza/fibra abajo -->
+          <rect x="88" y="268" width="8" height="8" rx="1" fill="#555"/>
+          <text x="100" y="276" font-family="'Share Tech Mono',monospace" font-size="7" fill="#555">Ceniza</text>
+          <rect x="135" y="268" width="8" height="8" rx="1" fill="#00ff41" opacity="0.5"/>
+          <text x="147" y="276" font-family="'Share Tech Mono',monospace" font-size="7" fill="#555">Sin ceniza</text>
+          <rect x="188" y="268" width="8" height="8" rx="1" fill="#00aaff" opacity="0.5"/>
+          <text x="200" y="276" font-family="'Share Tech Mono',monospace" font-size="7" fill="#555">Fibra</text>
+
+          <!-- Flecha ácido-alcalino -->
+          <line x1="60" y1="290" x2="240" y2="290" stroke="#333" stroke-width="1"/>
+          <text x="60" y="300" font-family="'Share Tech Mono',monospace" font-size="7" fill="#ff6666">ÁCIDO</text>
+          <text x="200" y="300" font-family="'Share Tech Mono',monospace" font-size="7" fill="#66ff66">ALCALINO</text>
+          <polygon points="240,286 240,294 248,290" fill="#00ff41"/>
+        </svg>
+      </div>
+
+      <!-- PROPORCIÓN BAR -->
+      <div class="prop-display" style="max-width:320px; width:100%;">
+        <div class="pd-a">
+          <div class="pd-pct" style="color:var(--verde); text-shadow:0 0 6px var(--verde);">50%</div>
+          <div class="pd-label" style="color:var(--verde-dim);">FOSFATO A</div>
+        </div>
+        <div class="pd-b">
+          <div class="pd-pct" style="color:#00aaff; text-shadow:0 0 6px #00aaff;">30%</div>
+          <div class="pd-label" style="color:rgba(0,150,255,0.6);">AZÚCAR B</div>
+        </div>
+        <div class="pd-c">
+          <div class="pd-pct" style="color:var(--rojo); text-shadow:0 0 6px var(--rojo);">20%</div>
+          <div class="pd-label" style="color:rgba(255,80,80,0.6);">NITRÓGENO C</div>
+        </div>
+      </div>
+
+      <!-- PH BAR -->
+      <div style="width:100%; max-width:320px;">
+        <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:10px; margin-bottom:3px;">
+          <span style="color:var(--rojo);">← ÁCIDO</span>
+          <span style="color:var(--amarillo);">pH Equilibrado 7.35/7.45</span>
+          <span style="color:var(--verde);">ALCALINO →</span>
+        </div>
+        <div class="ph-bar">
+          <div class="ph-acido">1────4</div>
+          <div class="ph-marker"></div>
+          <div class="ph-alcal">8────14</div>
+        </div>
+        <div style="display:flex; justify-content:center; gap:20px; font-family:var(--font-mono); font-size:9px; color:var(--verde-dim); margin-top:3px;">
+          <span>1 2 3 4 5 6 7 8 9 10 11 12 13 14</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="col-right">
+
+      <!-- CONSEJO FRUTA -->
+      <div class="bloque bloque-consejo">
+        <span class="consejo-tag ct-verde">✦ CONSEJO FRUTA</span>
+        <p style="font-size:11px; color:rgba(0,255,65,0.85); line-height:1.6; font-family:var(--font-mono);">
+          🍎 Las frutas se comen solas en un proceso digestivo independiente.
+        </p>
+      </div>
+
+      <!-- CONSEJO AGUA -->
+      <div class="bloque bloque-consejo" style="border-color:rgba(0,255,255,0.3);">
+        <span class="consejo-tag ct-cian">✦ CONSEJO AGUA</span>
+        <p style="font-size:11px; color:rgba(0,255,255,0.85); line-height:1.6; font-family:var(--font-mono);">
+          💧 Beber agua <strong>2 horas antes o después</strong> de las comidas, no durante.
+        </p>
+      </div>
+
+      <!-- A · FOSFATO 50% -->
+      <div class="bloque bloque-fosfato">
+        <span class="bloque-letra" style="color:var(--verde); text-shadow:0 0 10px var(--verde);">A</span>
+        <div style="color:var(--verde); font-family:var(--font-title); font-size:18px; letter-spacing:2px; margin-bottom:4px;">FOSFATO</div>
+        <div style="font-size:10px; color:var(--verde-dim); margin-bottom:6px; font-family:var(--font-mono);">Ácido → Alcalino · Reguladores</div>
+        <ul class="item-list" style="color:rgba(150,255,150,0.9);">
+          <li>🍎 Fruta fresca</li>
+          <li>💧 Agua pura</li>
+          <li>🥬 Verdura 4 colores</li>
+          <li>🫘 Legumbres frescas</li>
+        </ul>
+        <span class="bloque-pct" style="color:var(--verde); text-shadow:0 0 8px var(--verde); text-align:right; display:block; margin-top:8px;">50%</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SALUD DE LA PERSONA -->
+  <div class="fade-in delay-2">
+    <div style="font-family:var(--font-mono); font-size:11px; color:var(--verde-dim); text-align:center; margin-bottom:10px; letter-spacing:2px; text-transform:uppercase;">
+      ── La salud de la persona es: ──
+    </div>
+    <div class="salud-grid">
+      <div class="salud-box" style="border-color:rgba(0,255,65,0.5); box-shadow:0 0 12px rgba(0,255,65,0.1);">
+        <span class="salud-pct" style="color:var(--verde); text-shadow:0 0 10px var(--verde);">54%</span>
+        <div class="salud-label" style="color:var(--verde);">🥗 ALIMENTACIÓN</div>
+        <div style="font-size:9px; color:var(--verde-dim); margin-top:4px; font-family:var(--font-mono);">Factor principal</div>
+      </div>
+      <div class="salud-box" style="border-color:rgba(0,200,255,0.4);">
+        <span class="salud-pct" style="color:var(--cian); text-shadow:0 0 10px var(--cian);">16%</span>
+        <div class="salud-label" style="color:var(--cian);">🌿 Factores ambientales</div>
+      </div>
+      <div class="salud-box" style="border-color:rgba(255,136,0,0.4);">
+        <span class="salud-pct" style="color:var(--naranja); text-shadow:0 0 10px var(--naranja);">20%</span>
+        <div class="salud-label" style="color:var(--naranja);">🧬 Herencia genética</div>
+      </div>
+      <div class="salud-box" style="border-color:rgba(255,255,0,0.4);">
+        <span class="salud-pct" style="color:var(--amarillo); text-shadow:0 0 10px var(--amarillo);">10%</span>
+        <div class="salud-label" style="color:var(--amarillo);">🏥 Servicios médicos</div>
+        <div style="font-size:9px; color:rgba(255,255,0,0.5); margin-top:4px; font-family:var(--font-mono);">+ 8 remedios naturales</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sep" style="margin:20px 0;">
+
+  <!-- FRASE FINAL -->
+  <div class="frase-box fade-in delay-3">
+    "Todos estamos enfermos. El 54% de nuestra salud<br>se encuentra en la alimentación"
+    <span class="frase-autor">— Nimer Simeón Montes · Investigador en Nutrigenética</span>
+  </div>
+
+  <!-- ALIMENTACIÓN AL 100% -->
+  <div class="terminal-window fade-in delay-3" style="margin-top:16px;">
+    <div class="terminal-titlebar">
+      <span class="terminal-dot dot-r"></span><span class="terminal-dot dot-y"></span><span class="terminal-dot dot-g"></span>
+      <span style="margin-left:8px;">alimentacion_100pct.sh</span>
+    </div>
+    <div class="terminal-body">
+      <div class="prompt">cat /etc/alimentacion-completa.config</div>
+      <div class="prompt-out">
+        <p style="color:var(--verde); font-size:14px; margin-bottom:10px;">ALIMENTACIÓN AL 100% = pH Equilibrado 7.35 / 7.45</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px;">
+          <div style="border:1px solid rgba(0,255,65,0.3); padding:8px; border-radius:3px;">
+            <span style="color:var(--verde); font-size:11px; font-weight:bold;">1 · ALIMENTACIÓN</span><br>
+            <span style="font-size:11px; color:var(--verde-dim);">50/30/20 · pH 7.35-7.45</span>
+          </div>
+          <div style="border:1px solid rgba(0,200,255,0.3); padding:8px; border-radius:3px;">
+            <span style="color:var(--cian); font-size:11px; font-weight:bold;">2 · FACTORES AMBIENTALES</span><br>
+            <span style="font-size:11px; color:var(--verde-dim);">Sol · Aire · Agua pura</span>
+          </div>
+          <div style="border:1px solid rgba(255,136,0,0.3); padding:8px; border-radius:3px;">
+            <span style="color:var(--naranja); font-size:11px; font-weight:bold;">3 · HERENCIA GENÉTICA</span><br>
+            <span style="font-size:11px; color:var(--verde-dim);">ADN regenerable con nutrición</span>
+          </div>
+          <div style="border:1px solid rgba(255,255,0,0.3); padding:8px; border-radius:3px;">
+            <span style="color:var(--amarillo); font-size:11px; font-weight:bold;">4 · SERVICIOS MÉDICOS</span><br>
+            <span style="font-size:11px; color:var(--verde-dim);">+ 8 remedios naturales</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<div id="footer-container"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>
