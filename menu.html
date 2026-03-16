@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIETA PLANA 503020 · Menú Semanal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav-container"></div>
+<main>
+  <div class="section-title fade-in"><span class="emoji">🍽️</span><h1 class="neon-verde">MENÚ SEMANAL COMPLETO</h1></div>
+
+  <div style="display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap;">
+    <button onclick="showVersion('v1')" id="btn-v1" style="padding:8px 18px; background:rgba(0,255,65,0.15); border:1px solid var(--verde); color:var(--verde); font-family:var(--font-mono); font-size:12px; cursor:pointer; border-radius:3px;">🌿 VER VERSIÓN Nº1</button>
+    <button onclick="showVersion('v2')" id="btn-v2" style="padding:8px 18px; background:rgba(0,255,255,0.08); border:1px solid var(--cian-dim); color:var(--cian-dim); font-family:var(--font-mono); font-size:12px; cursor:pointer; border-radius:3px;">🥚 VER VERSIÓN Nº2</button>
+  </div>
+
+  <div id="menu-v1">
+    <div class="info-box" style="margin-bottom:20px;">🌿 <strong>VERSIÓN Nº1 · Solo Vegetal</strong> — Proporción 50% Fosfatos + 30% Carbohidratos + 20% Proteínas vegetales en cada comida.</div>
+    <div class="table-wrap fade-in">
+      <table>
+        <thead><tr>
+          <th style="color:var(--verde);">Día</th>
+          <th style="color:var(--verde);">🌅 Desayuno</th>
+          <th style="color:var(--verde);">☀️ Media mañana</th>
+          <th style="color:var(--verde);">🍽️ Almuerzo</th>
+          <th style="color:var(--verde);">🌤️ Merienda</th>
+          <th style="color:var(--verde);">🌙 Cena</th>
+        </tr></thead>
+        <tbody>
+          <tr><td style="color:var(--verde); font-weight:bold;">Lunes</td><td>Agua tibia + limón · Avena con banana, manzana y semillas de lino</td><td>Naranja o mandarina</td><td>Ensalada 4 colores + arroz integral + lentejas + aceite de oliva</td><td>Nueces (30g) + infusión</td><td>Crema de zapallo + quinoa + aguacate</td></tr>
+          <tr><td style="color:var(--verde); font-weight:bold;">Martes</td><td>Agua tibia · Licuado verde (espinaca+manzana+pepino+linaza) + pan integral</td><td>Pera o durazno</td><td>Ensalada 4 colores + papas hervidas + garbanzos + brócoli con ajo</td><td>Fruta + infusión de manzanilla</td><td>Zapallitos rellenos con arroz integral y verduras</td></tr>
+          <tr><td style="color:var(--verde); font-weight:bold;">Miércoles</td><td>Agua tibia · Quinoa con mango, frutillas y semillas de girasol</td><td>Manzana o kiwi</td><td>Ensalada 4 colores + arroz integral + porotos negros + zanahoria rallada</td><td>Mix de semillas + infusión</td><td>Sopa de lentejas con verduras + pan integral</td></tr>
+          <tr><td style="color:var(--verde); font-weight:bold;">Jueves</td><td>Agua tibia con jengibre · Avena + banana + nueces</td><td>Naranja o pomelo</td><td>Ensalada 4 colores + papa al horno + lentejas + espinaca salteada</td><td>Almendras + dátiles</td><td>Budín de verduras (zapallo+zanahoria) + quinoa</td></tr>
+          <tr><td style="color:var(--verde); font-weight:bold;">Viernes</td><td>Agua tibia · Licuado rojo (remolacha+zanahoria+manzana+linaza)</td><td>Frutas de estación</td><td>Ensalada 4 colores + arroz integral + soja texturizada + cebolla morada</td><td>Nueces + infusión de menta</td><td>Crema de zapallo + garbanzos + pan integral</td></tr>
+          <tr><td style="color:var(--verde); font-weight:bold;">Sábado</td><td>Agua tibia · Tostadas integrales + aguacate + tomate + semillas</td><td>Fruta + nueces</td><td>Ensalada 4 colores abundante + quinoa + porotos blancos + aceite de oliva</td><td>Frutas secas + mate cocido sin azúcar</td><td>Wok de verduras + fideos integrales</td></tr>
+          <tr><td style="color:var(--verde); font-weight:bold;">Domingo</td><td>Agua tibia · Fruta variada + avena remojada + semillas + cacao puro</td><td>Licuado de frutas natural</td><td>Ensalada 4 colores + arroz integral + lentejas + aguacate</td><td>Infusión de aloe vera + fruta</td><td>Locro de verduras (zapallo+choclo+poroto) + pan integral</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="menu-v2" style="display:none;">
+    <div class="info-box" style="margin-bottom:20px; border-color:var(--cian); color:rgba(0,255,255,0.85); background:rgba(0,255,255,0.04);">🥚 <strong>VERSIÓN Nº2 · Con Productos Animales</strong> — Misma proporción + proteínas animales con moderación.</div>
+    <div class="table-wrap fade-in">
+      <table>
+        <thead><tr>
+          <th style="color:var(--cian);">Día</th>
+          <th style="color:var(--cian);">🌅 Desayuno</th>
+          <th style="color:var(--cian);">☀️ Media mañana</th>
+          <th style="color:var(--cian);">🍽️ Almuerzo</th>
+          <th style="color:var(--cian);">🌤️ Merienda</th>
+          <th style="color:var(--cian);">🌙 Cena</th>
+        </tr></thead>
+        <tbody>
+          <tr><td style="color:var(--cian); font-weight:bold;">Lunes</td><td>Agua tibia · Avena con leche descremada + banana + semillas</td><td>Fruta + yogur natural</td><td>Ensalada 4 colores + arroz integral + pechuga de pollo 120g</td><td>Huevo duro + fruta</td><td>Crema de verduras + quinoa + pescado al vapor</td></tr>
+          <tr><td style="color:var(--cian); font-weight:bold;">Martes</td><td>Agua tibia · 2 huevos revueltos + tostada integral + tomate</td><td>Yogur natural + nueces</td><td>Ensalada 4 colores + papas hervidas + atún al natural + brócoli</td><td>Fruta + leche + cacao puro</td><td>Zapallitos rellenos + queso magro + verduras</td></tr>
+          <tr><td style="color:var(--cian); font-weight:bold;">Miércoles</td><td>Agua tibia · Licuado con leche + frutas + semillas</td><td>Fruta de estación</td><td>Ensalada 4 colores + arroz integral + lentejas + huevo poché</td><td>Almendras + yogur</td><td>Sopa de verduras + pollo desmenuzado + pan integral</td></tr>
+          <tr><td style="color:var(--cian); font-weight:bold;">Jueves</td><td>Agua tibia · Avena con leche + frutas secas</td><td>Fruta + queso fresco magro</td><td>Ensalada 4 colores + quinoa + sardinas al natural + aguacate</td><td>Huevo duro + infusión</td><td>Budín de verduras + pechuga de pollo 100g</td></tr>
+          <tr><td style="color:var(--cian); font-weight:bold;">Viernes</td><td>Agua tibia · Tostadas + queso cottage + tomate + aceite de oliva</td><td>Frutas mixtas + yogur</td><td>Ensalada 4 colores + arroz integral + huevo revuelto + espinaca</td><td>Nueces + fruta</td><td>Crema de zapallo + filete de pescado blanco al horno</td></tr>
+          <tr><td style="color:var(--cian); font-weight:bold;">Sábado</td><td>Agua tibia · Panqueques de avena (sin azúcar) + frutas + semillas</td><td>Fruta + leche caliente con canela</td><td>Ensalada 4 colores + papa al horno + pollo al horno con hierbas</td><td>Yogur + semillas + fruta</td><td>Wok de verduras + fideos integrales + tiras de pollo</td></tr>
+          <tr><td style="color:var(--cian); font-weight:bold;">Domingo</td><td>Agua tibia · Fruta + 2 huevos a elección + pan integral</td><td>Licuado natural + queso fresco</td><td>Ensalada 4 colores + arroz integral + pescado a la plancha + limón</td><td>Fruta + nueces + infusión</td><td>Locro de verduras + pollo desmenuzado + pan integral</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+<div id="footer-container"></div>
+<script src="js/nav.js"></script>
+<script>
+function showVersion(v) {
+  document.getElementById('menu-v1').style.display = v==='v1' ? 'block' : 'none';
+  document.getElementById('menu-v2').style.display = v==='v2' ? 'block' : 'none';
+  const b1 = document.getElementById('btn-v1');
+  const b2 = document.getElementById('btn-v2');
+  b1.style.background = v==='v1' ? 'rgba(0,255,65,0.15)' : 'transparent';
+  b1.style.borderColor = v==='v1' ? 'var(--verde)' : 'var(--verde-dim)';
+  b1.style.color = v==='v1' ? 'var(--verde)' : 'var(--verde-dim)';
+  b2.style.background = v==='v2' ? 'rgba(0,255,255,0.1)' : 'transparent';
+  b2.style.borderColor = v==='v2' ? 'var(--cian)' : 'var(--cian-dim)';
+  b2.style.color = v==='v2' ? 'var(--cian)' : 'var(--cian-dim)';
+}
+</script>
+</body>
+</html>
